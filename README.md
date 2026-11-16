@@ -3,6 +3,12 @@
 The `llm-praxis` marketplace of Claude Code plugins for the LLM Praxis
 sessions.
 
+## Plugins
+
+| Plugin | What it does |
+|--------|--------------|
+| [`statusline`](plugins/statusline/README.md) | A status line that shows the model, effort, cost, prompt cache, context and usage windows |
+
 ## Install
 
 In Claude Code, add the marketplace once:

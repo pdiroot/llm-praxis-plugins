@@ -3,5 +3,10 @@
   "owner": {
     "name": "Dmytro Pinchukov"
   },
-  "plugins": []
+  "plugins": [
+    {
+      "name": "statusline",
+      "source": "./plugins/statusline"
+    }
+  ]
 }
