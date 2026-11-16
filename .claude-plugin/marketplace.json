@@ -1,0 +1,12 @@
+{
+  "name": "llm-praxis",
+  "owner": {
+    "name": "Dmytro Pinchukov"
+  },
+  "plugins": [
+    {
+      "name": "statusline",
+      "source": "./plugins/statusline"
+    }
+  ]
+}
