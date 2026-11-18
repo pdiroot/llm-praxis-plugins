@@ -1,7 +1,7 @@
 # Status Line
 
 A Claude Code plugin of the [`llm-praxis` marketplace](../../README.md). It
-adds a status line to a project:
+adds a status line to each project of a user:
 
 ```text
 shop │ Opus │ high │ $12.47 │ ◷ cache 41m │ ▰▰▰▱▱▱▱▱ 34% │ 5h 42% │ 7d 61% ↻ 3d 4h13m
@@ -37,13 +37,15 @@ segment with no data is left out.
 /plugin install statusline@llm-praxis
 ```
 
-Then run `/statusline:install` in the project. It copies the script to
-`.claude/statusline.py` and adds `statusLine` to `.claude/settings.json`. It
-never replaces a status line that you set yourself. Run it again to update
+Then run `/statusline:install` once, in any project. It copies the script to
+`~/.claude/statusline.py` and adds `statusLine` to `~/.claude/settings.json`,
+so the status line shows in each project and nothing goes into a repository.
+If you set `CLAUDE_CONFIG_DIR`, it uses that folder instead of `~/.claude`.
+It never replaces a status line that you set yourself. Run it again to update
 the script.
 
 To show the reset time of a limit from a different percent, set
-`STATUSLINE_RESET_FROM` in the `env` of `.claude/settings.json`. Use `0` to
+`STATUSLINE_RESET_FROM` in the `env` of `~/.claude/settings.json`. Use `0` to
 always show it:
 
 ```json
@@ -53,10 +55,10 @@ always show it:
 ```
 
 To change the colors or the other thresholds, edit the settings at the top
-of `.claude/statusline.py`: `CYAN`, `YELLOW` and `RED` for the colors,
+of `~/.claude/statusline.py`: `CYAN`, `YELLOW` and `RED` for the colors,
 `WARN`, `DANGER`, `COST_WARN`, `COST_DANGER` and `RESET_FROM` for the
-thresholds. To remove it, delete `statusLine` from `.claude/settings.json`,
-then delete `.claude/statusline.py`.
+thresholds. To remove it, delete `statusLine` from `~/.claude/settings.json`,
+then delete `~/.claude/statusline.py`.
 
 ## License
 
