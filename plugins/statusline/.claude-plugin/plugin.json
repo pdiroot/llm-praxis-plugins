@@ -1,6 +1,6 @@
 {
   "name": "statusline",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A status line that shows the model, effort, cost, prompt cache, context and usage windows.",
   "author": {"name": "Dmytro Pinchukov"}
 }
