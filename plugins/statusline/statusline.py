@@ -115,7 +115,10 @@ def segments(data: dict[str, Any], now: float) -> list[str | None]:
     current = workspace.get("project_dir") or workspace.get("current_dir")
     name = PurePath(current).name if isinstance(current, str) else ""
     out.append(paint(CYAN, name) if name else None)
-    for value in (section(data, "model").get("display_name"), section(data, "effort").get("level")):
+    for value in (
+        section(data, "model").get("display_name"),
+        section(data, "effort").get("level"),
+    ):
         out.append(value if isinstance(value, str) and value else None)
     cost = number(section(data, "cost").get("total_cost_usd"))
     out.append(cost_segment(cost) if cost is not None else None)
